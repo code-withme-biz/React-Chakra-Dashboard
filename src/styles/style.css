@@ -1,0 +1,168 @@
+span.rdrStartEdge,
+span.rdrEndEdge {
+  border-radius: 40px;
+  padding: 1px;
+  left: 5px;
+  top: 1px;
+  bottom: 1px;
+  right: 5px;
+  background: #357c95;
+  z-index: 1;
+}
+span.rdrDayEndOfWeek,
+span.rdrStartEdge {
+  border-top-right-radius: none;
+  border-bottom-right-radius: none;
+}
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span {
+  color: #fff !important;
+  font-size: 14px;
+}
+button.rdrDayPassive span span {
+  color: #667085 !important;
+  font-size: 14px;
+}
+span.rdrInRange {
+  position: absolute;
+  left: -17px;
+  right: -17px;
+  bottom: 1px;
+  top: 1px;
+  background: #eefafe;
+}
+.rdrDayNumber {
+  z-index: 2;
+}
+.rdrWeekDays span {
+  font-size: 14px;
+}
+.rdrDayNumber span {
+  color: #357c95 !important;
+  font-size: 14px;
+}
+.rdrMonthName {
+  text-align: center !important;
+  color: #344054 !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+}
+.rdrDateDisplayWrapper {
+  order: 2;
+  background-color: transparent !important;
+}
+.rdrCalendarWrapper.rdrDateRangeWrapper {
+  display: flex;
+}
+.rdrDateDisplay {
+  width: 300px;
+}
+span.rdrDateInput.rdrDateDisplayItem.rdrDateDisplayItemActive,
+span.rdrDateInput.rdrDateDisplayItem {
+  box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+}
+.rdrStaticRange {
+  border-bottom: none !important;
+}
+.rdrStaticRanges > button:nth-child(6) {
+  /* display: none; */
+}
+.rdrInputRanges {
+  display: none;
+}
+.overflowText {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.rdrDefinedRangesWrapper{
+  padding-right: 24px;
+  font-size: 14px !important;
+  width: 180px;
+}
+button.rdrStaticRange.rdrStaticRangeSelected{
+  color: #357C95 !important;
+  background: #CEE2E9 !important;
+  border-radius: 5px;
+}
+/*  sidemenu  */
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 200px;
+  min-width: 200px;
+  overflow: visible;
+  background: #fff;
+  box-shadow: 8px 0px 24px rgba(113, 118, 160, 0.24), inset -1px 0px 0px #e9ebf3;
+}
+.main-menu .sidebarSearch {
+  opacity: 0;
+  max-height: 20px;
+}
+.main-menu:hover .menuOptionLi span,
+nav.main-menu.expanded .menuOptionLi span,
+.main-menu:hover .sidebarlogo,
+.main-menu:hover .sidebarSearch,
+.main-menu:hover .demoLogo {
+  display: unset;
+  opacity: 1;
+}
+.main-menu {
+  border-right: 1px solid #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 70px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000;
+}
+.main-menu .menuOptionLi {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+.menuOptionUl,
+.menuOptionLi {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+.main-menu .demoLogo,
+.menuOptionLi span {
+  display: none;
+}
+.sidebarlogo {
+  display: none;
+  height: 30px;
+}
+.main-menu:hover a.chakra-link {
+  width: 170px;
+}
+.chakra-popover__arrow.css-0 {
+  display: none;
+}
+ul.pagination {
+  display: flex;
+  list-style: none;
+}
+li.page-item {
+  background: #FFFFFF;
+  border: 1px solid #E9EBF3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li.page-item.active {
+  border: 1px solid #357C95;
+}

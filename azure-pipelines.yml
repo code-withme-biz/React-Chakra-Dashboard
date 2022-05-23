@@ -1,0 +1,35 @@
+name: 0.1.$(Rev:rrrr)
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: BuildAndTest
+    displayName: Build And Test
+    jobs:
+      - job: BuildAndTest
+        displayName: Build And Test
+        steps:
+          - checkout: self
+            clean: true
+            persistCredentials: true
+          - task: npmAuthenticate@0
+            inputs:
+              workingFile: '.npmrc'
+          - script: |
+              npm i -g pnpm
+            displayName: 'Install pnpm'
+          - script: |
+              pnpm i
+            displayName: 'Install NPM dependencies'
+          - script: |
+              pnpm run build
+            displayName: 'Build Application'
+          - script: |
+              pnpm test:unit -- --ci --reporters=default --reporters=jest-junit
+            displayName: 'Run Unit Tests'
+          - task: PublishTestResults@2
+            condition: succeededOrFailed()
+            inputs:
+              testRunner: JUnit
+              testResultsFiles: 'junit.xml'

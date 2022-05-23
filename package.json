@@ -1,0 +1,217 @@
+{
+  "name": "@infinicept/boarding-app",
+  "version": "2.0.0",
+  "description": "React Infinicept Boarding Application.",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "react",
+    "chakra-ui"
+  ],
+  "scripts": {
+    "dev": "vite --host",
+    "dev:storybook": "start-storybook -p 6006",
+    "build": "vite build",
+    "build:storybook": "build-storybook",
+    "serve": "vite preview",
+    "prepare": "husky install",
+    "style:prettier": "prettier --write .",
+    "lint:source": "eslint ./src",
+    "lint:stories": "eslint ./stories",
+    "lint:storybook": "eslint ./.storybook",
+    "lint": "pnpm run lint:source && pnpm run lint:stories && pnpm run lint:storybook",
+    "test:unit": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" jest",
+    "test:integration": "cypress run-ct",
+    "test:integration:write": "cypress open-ct",
+    "test:qa:write": "cypress open",
+    "test:qa": "pnpm run dev & cypress run"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm run lint"
+    ]
+  },
+  "lint-prepush": {
+    "base": "develop",
+    "tasks": {
+      "*.{js,jsx,ts,tsx}": [
+        "pnpm run lint"
+      ]
+    }
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.5",
+    "@chakra-ui/react": "^1.8.3",
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "axios": "^0.23.0",
+    "chakra-dayzed-datepicker": "^0.1.5",
+    "date-fns": "^2.28.0",
+    "dayjs": "^1.10.7",
+    "dayzed": "^3.2.2",
+    "framer-motion": "^5.6.0",
+    "highcharts": "^9.3.3",
+    "highcharts-react-official": "^3.1.0",
+    "history": "^5.2.0",
+    "jest-junit": "^13.0.0",
+    "react": "^17.0.2",
+    "react-auto-tab": "^2.0.1",
+    "react-date-range": "^1.4.0",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.7.1",
+    "react-hook-form": "^7.27.0",
+    "react-paginate": "^8.1.2",
+    "react-router-dom": "^6.2.1",
+    "react-table": "^7.7.0",
+    "react-vega": "^7.4.4",
+    "vega": "^5.21.0",
+    "vega-embed": "^6.20.8",
+    "vega-lite": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@base2/pretty-print-object": "^1.0.1",
+    "@cypress/react": "^5.12.3",
+    "@cypress/vite-dev-server": "^2.2.2",
+    "@emotion/core": "npm:@emotion/react@^11.7.1",
+    "@emotion/is-prop-valid": "^1.1.1",
+    "@mdx-js/react": "^2.0.0",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addons": "^6.4.19",
+    "@storybook/channel-postmessage": "^6.4.19",
+    "@storybook/channel-websocket": "^6.4.19",
+    "@storybook/client-api": "^6.4.19",
+    "@storybook/client-logger": "^6.4.19",
+    "@storybook/core": "^6.4.19",
+    "@storybook/core-common": "^6.4.19",
+    "@storybook/csf": "^0.0.1",
+    "@storybook/preview-web": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/node": "^16.11.25",
+    "@types/react": "^17.0.39",
+    "@types/react-date-range": "^1.4.3",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-table": "^7.7.9",
+    "@types/vite-plugin-react-svg": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@vitejs/plugin-react": "^1.2.0",
+    "acorn": "^8.7.0",
+    "acorn-jsx": "^5.3.2",
+    "acorn-walk": "^8.2.0",
+    "airbnb-js-shims": "^2.2.1",
+    "ansi-to-html": "^0.7.2",
+    "axe-core": "^4.4.1",
+    "babel-jest": "^27.5.1",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-tsconfig-paths": "^1.0.2",
+    "babel-preset-vite": "^1.0.4",
+    "color-convert": "^2.0.1",
+    "core-js": "^3.21.1",
+    "cross-env": "^7.0.3",
+    "csstype": "^3.0.10",
+    "cypress": "^8.7.0",
+    "deep-object-diff": "^1.1.7",
+    "doctrine": "^3.0.0",
+    "emotion-theming": "npm:@emotion/react@^11.7.1",
+    "escodegen": "^2.0.0",
+    "eslint": "^8.9.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-react": "^7.28.0",
+    "estraverse": "^5.3.0",
+    "fast-deep-equal": "^3.1.3",
+    "global": "^4.4.0",
+    "html-tags": "^3.1.0",
+    "husky": "^7.0.4",
+    "i": "^0.3.7",
+    "i18next": "^21.6.11",
+    "isobject": "^4.0.0",
+    "jest": "^27.5.1",
+    "lint-prepush": "^2.2.0",
+    "lint-staged": "^11.2.6",
+    "loader-utils": "^3.2.0",
+    "lodash": "^4.17.21",
+    "markdown-to-jsx": "^7.1.6",
+    "memoizerific": "^1.11.3",
+    "npm": "^8.5.1",
+    "overlayscrollbars": "^1.13.1",
+    "polished": "^4.1.4",
+    "precise-commits": "^1.0.2",
+    "prettier": "^2.5.1",
+    "qs": "^6.10.3",
+    "react-fast-compare": "^3.2.0",
+    "react-i18next": "^11.15.4",
+    "react-is": "^17.0.2",
+    "react-textarea-autosize": "^8.3.3",
+    "refractor": "^3.5.0",
+    "regenerator-runtime": "^0.13.9",
+    "slash": "^4.0.0",
+    "stable": "^0.1.8",
+    "store2": "^2.13.1",
+    "storybook-builder-vite": "^0.1.16",
+    "synchronous-promise": "^2.0.15",
+    "telejson": "^5.3.3",
+    "ts-dedent": "^2.2.0",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5",
+    "unfetch": "^4.2.0",
+    "util-deprecate": "^1.0.2",
+    "uuid-browser": "^3.1.0",
+    "vite": "^2.8.4",
+    "vite-plugin-dynamic-import": "^0.1.1",
+    "vite-plugin-react-svg": "^0.2.0",
+    "vite-tsconfig-paths": "^3.4.0",
+    "warning": "^4.0.3"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(t|j)sx?$": "babel-jest"
+    },
+    "testMatch": [
+      "<rootDir>/__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.ts"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/__mocks__/fileMock.ts"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "babel-preset-vite",
+          "@babel/preset-typescript",
+          "@babel/preset-env",
+          [
+            "@babel/preset-react",
+            {
+              "runtime": "automatic"
+            }
+          ]
+        ],
+        "plugins": [
+          "babel-plugin-tsconfig-paths"
+        ]
+      }
+    }
+  },
+  "author": "Mindtrust"
+}

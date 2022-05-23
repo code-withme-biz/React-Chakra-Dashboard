@@ -1,0 +1,22 @@
+{
+  "component": {
+    "componentFolder": "__tests__",
+    "video": false,
+    "testFiles": "**/*integration.tsx",
+    "watchForFileChanges": false,
+    "screenshotsFolder": "__tests__/__cypress__/integration/screenshots",
+    "downloadsFolder": "__tests__/__cypress__/integration/downloads",
+    "videosFolder": "__tests__/__cypress__/integration/videos"
+  },
+  "pluginsFile": "__tests__/__cypress__/plugins/index.ts",
+  "fixturesFolder": "__tests__/__cypress__/fixtures",
+  "screenshotsFolder": "__tests__/__cypress__/qa/screenshots",
+  "downloadsFolder": "__tests__/__cypress__/qa/downloads",
+  "integrationFolder": "__tests__",
+  "videosFolder": "__tests__/__cypress__/qa/videos",
+  "watchForFileChanges": false,
+  "supportFile": "__tests__/__cypress__/support/index.ts",
+  "video": false,
+  "componentFolder": "__tests__",
+  "testFiles": "**/*.qa.tsx"
+}
